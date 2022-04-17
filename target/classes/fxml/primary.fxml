@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.FXMLController">
+  <tabs>
+    <Tab text="Calculate">
+         <content>
+            <VBox fx:id="tab" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <HBox prefHeight="100.0" prefWidth="400.0">
+                                 <children>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="100.0" prefWidth="412.0" text="Interest calculator">
+                                       <font>
+                                          <Font name="Noto Sans Light" size="36.0" />
+                                       </font>
+                                       <effect>
+                                          <Glow />
+                                       </effect>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="112.0" prefWidth="229.0" text="Starting balance">
+                                       <font>
+                                          <Font name="Noto Sans Light" size="24.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="112.0" prefWidth="229.0" text="APY">
+                                       <font>
+                                          <Font name="Noto Sans Light" size="24.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="112.0" prefWidth="229.0" text="Years">
+                                       <font>
+                                          <Font name="Noto Sans Light" size="24.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <HBox prefHeight="100.0" prefWidth="412.0">
+                                 <children>
+                                    <Button fx:id="calculateButton" mnemonicParsing="false" onAction="#calculate" prefHeight="100.0" prefWidth="355.0" text="Calculate">
+                                       <font>
+                                          <Font name="Noto Sans Light" size="19.0" />
+                                       </font>
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                       <HBox.margin>
+                                          <Insets left="45.0" right="45.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <TextField fx:id="balance" alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="100.0" prefWidth="182.0" promptText="1000">
+                                       <font>
+                                          <Font name="Noto Sans Light" size="28.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <TextField fx:id="apy" alignment="CENTER" prefHeight="100.0" prefWidth="95.0" promptText="10">
+                                       <HBox.margin>
+                                          <Insets left="50.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font name="Noto Sans Light" size="28.0" />
+                                       </font>
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <TextField fx:id="years" alignment="CENTER" prefHeight="100.0" prefWidth="94.0" promptText="5">
+                                       <font>
+                                          <Font name="Noto Sans Light" size="28.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="50.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <Label fx:id="label" alignment="CENTER" prefHeight="579.0" prefWidth="1046.0">
+                     <font>
+                        <Font size="71.0" />
+                     </font>
+                  </Label>
+                  <BarChart fx:id="chart">
+                    <xAxis>
+                      <CategoryAxis side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis side="LEFT" />
+                    </yAxis>
+                  </BarChart>
+               </children>
+            </VBox>
+         </content></Tab>
+    <Tab text="Accounts" />
+  </tabs>
+</TabPane>
